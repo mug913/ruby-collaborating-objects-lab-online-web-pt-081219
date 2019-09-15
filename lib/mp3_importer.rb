@@ -23,6 +23,7 @@ class MP3Importer
       targetsong = Song.new(newsong[1])
        binding.pry
       targetsong.artist = newsong[0]
+      binding.pry
       targetsong.genre = newsong[2] 
    
     end
