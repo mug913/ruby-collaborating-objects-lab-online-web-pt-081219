@@ -7,6 +7,7 @@ class MP3Importer
    @path = path
    @files = []
     Dir.foreach(self.path) do |file| 
+      if file
       @files << file 
     end 
   end
