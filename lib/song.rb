@@ -25,6 +25,10 @@ class Song
       targetsong = Song.new(newsong[1])
       targetsong.artist = newsong[0]
       targetsong
+  end 
+  
+  def self.all
+    @@all 
   end
   
 end
