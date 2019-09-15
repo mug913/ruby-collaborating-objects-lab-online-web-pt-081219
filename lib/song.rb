@@ -21,14 +21,14 @@ class Song
   end
   
     def artist_name= (name)
-      binding.pry
-    if (Artist.all.select{|artist| artist.name == name}) != []
-      @artist = Artist.all.select{|artist| artist.name == name}
-      self.artist.add_song(self)
-      binding.pry
-    else 
-      @artist = Artist.new(name)
-      self.artist.add_song(self)
+      if (Artist.all.select{|artist| artist.name == name}) != []
+        @artist = Artist.all.select{|artist| artist.name == name}
+        binding.pry
+        self.artist.add_song(self)
+        binding.pry
+      else 
+        @artist = Artist.new(name)
+        self.artist.add_song(self)
     end
   end
   
