@@ -2,7 +2,7 @@ require 'pry'
 
 class Song 
   
-  attr_accessor :title
+  attr_accessor :title, :genre
   attr_reader :artist
   
   def initialize(title)
