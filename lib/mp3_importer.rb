@@ -18,6 +18,4 @@ class MP3Importer
     @path
   end
   
-  def 
-  
 end
