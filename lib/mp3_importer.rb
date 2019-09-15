@@ -8,8 +8,8 @@ class MP3Importer
    @files = []
     Dir.foreach(self.path) do |file| 
       if file == /\w+.mp3/
-      @files << file 
-    end
+        @files << file 
+      end
     end 
   end
   
