@@ -21,8 +21,8 @@ class Song
   end
   
     def artist_name= (name)
-    if Artist.all.
-    if self.artist.is_a?(Artist)
+    if Artist.all.include?(name)
+    binding.pry
       self.artist.add_song(self)
     else 
       @artist = Artist.new(name)
