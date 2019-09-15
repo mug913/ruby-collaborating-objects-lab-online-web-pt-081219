@@ -12,8 +12,11 @@ class Song
   def artist= (name)
     @artist = name
     binding.pry
-    if self.artist.
-    self.artist.add_song(self)
+    if self.artist.is_a?(Artist)
+      self.artist.add_song(self)
+    else 
+      @artist = Artist.new(name)
+      self.artist.add_song(self)
   end
     
  
