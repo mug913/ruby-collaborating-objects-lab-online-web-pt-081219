@@ -7,10 +7,8 @@ class MP3Importer
    @path = path
    @files = []
     Dir.foreach(self.path) do |file| 
-          #  binding.pry
       if file.match(/.mp3/)
         @files << file 
-
       end
     end 
   end
@@ -19,4 +17,7 @@ class MP3Importer
     @path
   end
   
+  def import
+    binding.pry
+  end
 end
