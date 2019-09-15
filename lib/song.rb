@@ -23,6 +23,7 @@ class Song
     def artist_name= (name)
       if (Artist.all.select{|artist| artist.name == name}) != []
         found_artist = Artist.all.select{|artist| artist.name == name}
+        binding.pry
         @artist = found_artist
         found_artist.add_song(self)
         binding.pry
