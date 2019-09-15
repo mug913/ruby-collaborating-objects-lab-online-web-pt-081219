@@ -21,7 +21,7 @@ class Song
   end
   
     def artist_name= (name)
-    @artist = name
+    if Artist.all.
     if self.artist.is_a?(Artist)
       self.artist.add_song(self)
     else 
