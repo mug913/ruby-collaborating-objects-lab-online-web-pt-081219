@@ -21,9 +21,10 @@ class MP3Importer
     @files.each do |file|
       newsong = file.split(" - ")
       targetsong = Song.new(newsong[1])
+       binding.pry
       targetsong.artist = newsong[0]
       targetsong.genre = newsong[2] 
-    binding.pry
+   
     end
   end
 end
