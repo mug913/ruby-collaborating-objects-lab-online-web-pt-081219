@@ -11,7 +11,6 @@ class Song
   
   def artist= (name)
     @artist = name
-    binding.pry
     if self.artist.is_a?(Artist)
       self.artist.add_song(self)
     else 
