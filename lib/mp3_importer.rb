@@ -7,7 +7,8 @@ class MP3Importer
    @path = path
    @files = []
     Dir.foreach(self.path) do |file| 
-      if (file == /\w+.mp3/)
+      binding.pry
+      if file == /\w+.mp3/
         @files << file 
       end
     end 
