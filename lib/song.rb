@@ -20,6 +20,16 @@ class Song
     end
   end
   
+    def artist_name= (name)
+    @artist = name
+    if self.artist.is_a?(Artist)
+      self.artist.add_song(self)
+    else 
+      @artist = Artist.new(name)
+      self.artist.add_song(self)
+    end
+  end
+  
   def self.new_by_filename(filename)
       newsong = filename.split(" - ")
       targetsong = Song.new(newsong[1])
