@@ -17,7 +17,7 @@ class Song
     else 
       @artist = Artist.new(name)
       self.artist.add_song(self)
+    end
   end
-    
- 
-end 
+  
+end
